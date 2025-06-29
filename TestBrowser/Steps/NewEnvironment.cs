@@ -20,7 +20,6 @@ namespace TestBrowser.Steps
             string[] properties = ["env", "clientName", "userName", "password", "url"];
 
             BrowserInstance.Navigate().GoToUrl(webUrl);
-            BrowserInstance.Manage().Window.Size = new System.Drawing.Size(750, 1110);
 
             Thread.Sleep(40 * Constants.StandartWaitTime);
             ionListParent = BrowserInstance.FindElement(By.XPath("//*//ion-app/ion-modal/app-is-settings-form/ion-content/ion-row/ion-col/form/ion-list"));
