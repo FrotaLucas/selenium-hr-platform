@@ -4,11 +4,8 @@ namespace TestBrowser.Steps
 {
     internal class Login : StepBase
     {
-        //StepBase foi declarada como tipo abstract, logo a classe nao pode ser instanciada e seus metodos sao normalmente abstratos 
-        //StepBase stepBase = new StepBase("name");
-
-
-        public Login() : base("login") // pq eu so posso chamar o construtor StepBase dessa forma. Ele eh protected posso usar nas filhas sempres !!
+      
+        public Login() : base("login") 
         {
             
         }
