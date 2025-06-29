@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="136.0.7103.11300" />
+    <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="136.0.3240.76" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestBrowser\TestBrowser.csproj" />
+  </ItemGroup>
+
+</Project>
