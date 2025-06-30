@@ -13,11 +13,16 @@ namespace TestBrowser.Steps
         {
             IWebElement element;
 
-            var firstBackButton = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-webform/ion-header/ion-toolbar/ion-buttons"));
+            var dialogContainer = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/mat-dialog-container"));
 
+            //dialog-content
+            element = dialogContainer.FindElement(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content"));
 
-            element = firstBackButton[0].FindElement(By.XPath(".//ion-back-button"));
+            //Name
+            element = element.FindElement(By.XPath(".//div/div/mat-form-field/div/div/div/input"));
+
             element.Click();
+
             Thread.Sleep(20 * Constants.StandartWaitTime);
 
             var SecbackButton = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-list/ion-header/ion-toolbar/ion-buttons"));
