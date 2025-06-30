@@ -13,8 +13,8 @@
             "step_path": null
         },
         "step3": {
-            "function_name": "navMenuTree",
-            "step_value": "Test > Item > Item",
+            "function_name": "createEmployee",
+            "step_value": null,
             "step_path": null
         },
         "step4": {
