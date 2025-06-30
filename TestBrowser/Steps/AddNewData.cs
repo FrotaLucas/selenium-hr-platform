@@ -12,11 +12,9 @@ namespace TestBrowser.Steps
         {
             IWebElement element;
 
-            var buttons = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-list/ion-footer/ion-toolbar/ion-buttons"));
-      
-
-            element = buttons[0].FindElement(By.XPath(".//ion-button"));
-            element.Click();
+            var button = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/div/button"));
+    
+            button.Click();
             Thread.Sleep(20 * Constants.StandartWaitTime);
             return true;
         }
