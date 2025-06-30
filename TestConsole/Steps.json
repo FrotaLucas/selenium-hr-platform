@@ -4,7 +4,7 @@
     "Steps": {
         "step1": {
             "function_name": "newEnvironment",
-            "step_value": "test",
+            "step_value": null,
             "step_path": null
         },
         "step2": {
