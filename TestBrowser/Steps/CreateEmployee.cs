@@ -19,10 +19,14 @@ namespace TestBrowser.Steps
             var felds = dialogContainer.FindElements(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content/div"));
 
             //Name
-            element = felds[0].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
+            var name = felds[0].FindElement(By.XPath("//*//input[contains(@formcontrolname, nombre)]"));
+            name.Click();
+            name.SendKeys("Lucas");
 
-            element.Click();
-            element.SendKeys("Lucas");
+            //surname 
+            var surnameFeld = felds[0].FindElement(By.XPath("//*//input[contains(@formcontrolname, apellido)]"));
+            surnameFeld.Click();
+            surnameFeld.SendKeys("Lucas");
 
             //Email
             element = felds[1].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
@@ -30,8 +34,8 @@ namespace TestBrowser.Steps
             element.Click();
             element.SendKeys("lucas_frota@hotmail.com");
 
-            //Type Document
-            element = felds[1].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
+            //Birthday
+            element = felds[3].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
 
             element.Click();
             element.SendKeys("lucas_frota@hotmail.com");
