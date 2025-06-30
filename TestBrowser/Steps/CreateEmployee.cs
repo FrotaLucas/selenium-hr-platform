@@ -36,6 +36,14 @@ namespace TestBrowser.Steps
 
             email.SendKeys("lucas_frota@hotmail.com");
 
+            //type of document
+
+            var typeDocumentoFeld = felds[2].FindElement(By.XPath(".//div"));
+            typeDocumentoFeld.Click();
+
+            var matOption = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/div/mat-option"));
+            matOption.Click();
+
             //Birthday
             var birthDate = felds[3].FindElement(By.XPath(".//input[contains(@formcontrolname, 'fechaNacimento')]"));
             birthDate.Click();
