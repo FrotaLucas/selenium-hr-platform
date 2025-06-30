@@ -9,7 +9,7 @@ namespace TestConsole
     public static class AppSettings
     {
         public static string BrowserType = "Chrome";
-        public static string WebUrl = "https://isbase-appbrowser-test.inscopus.de";
+        public static string WebUrl = "https://frotalucas.github.io/HR-platform";
         public static bool ChromeSilent = true;
         //public static string ChromeExeLocation = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
     }
