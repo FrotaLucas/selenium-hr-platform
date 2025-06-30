@@ -25,6 +25,8 @@ namespace TestBrowser.Steps
 
             Thread.Sleep(20 * Constants.StandartWaitTime);
 
+
+
             var SecbackButton = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-list/ion-header/ion-toolbar/ion-buttons"));
             element = SecbackButton[0].FindElement(By.XPath(".//ion-back-button"));
             element.Click();
