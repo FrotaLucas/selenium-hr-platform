@@ -21,8 +21,8 @@ Console.WriteLine($"EditorName: {editorName}\n{AppSettings.WebUrl}\nBrowser: {Ap
 
 webDriver = AppDriverSettings.GetWebDriver();
 
-string jsonFilePath = "C:\\MyFolders\\Visual_Studio_Projects\\IHK\\selenium-ihk-project\\TestConsole\\StepTest.json";
-//string jsonFilePath = "C:\\Users\\lucas.frota\\Desktop\\SEGURO\\IHK Projeto Ideias\\selenium-ihk-projekt-new\\TestConsole\\StepTest.json"; 
+//string jsonFilePath = "C:\\MyFolders\\Visual_Studio_Projects\\IHK\\selenium-ihk-project\\TestConsole\\Steps.json";
+string jsonFilePath = "C:\\MyFolders\\Visual_Studio_Projects\\selenium-hr-platform\\TestConsole\\Steps.json";
 
 if (!File.Exists(jsonFilePath))
 {
