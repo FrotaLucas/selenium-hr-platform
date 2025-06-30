@@ -14,19 +14,6 @@ namespace TestBrowser
 
         public AppDriver(IWebDriver browserInstance, string webUrl)
         {
-            Dog dogin = new Dog();
-
-            dogin.PrintDogColor();
-
-            //Aqui da pra garantir que propriedade AnimalName e campo AnimalColor ja vao esta prontos para ser usados
-            //por causa da ordem de inicializacao !! Quando chega na classe Dog, propriedade e campo da classe animal ja vao esta 
-            //prontos em tempo de execucao
-
-            string color = dogin.AnimalColor;
-            string name = dogin.AnimalName;
-
-            var list = new List<Animal>();
-
 
 
             this.BrowserInstance = browserInstance;
