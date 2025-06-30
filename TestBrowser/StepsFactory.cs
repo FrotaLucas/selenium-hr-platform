@@ -16,7 +16,7 @@ namespace TestBrowser
                 new SetComment(),
                 new SetDate(),
                 new SaveChanges(),
-                new Logout(),
+                new CreateEmployee(),
             };
         }
     }

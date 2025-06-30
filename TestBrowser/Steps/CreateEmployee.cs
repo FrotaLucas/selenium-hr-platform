@@ -2,9 +2,9 @@
 
 namespace TestBrowser.Steps
 {
-    internal class Logout : StepBase
+    internal class CreateEmployee : StepBase
     {
-        public Logout() : base("logOut")
+        public CreateEmployee() : base("createEmployee")
         {
         }
 
