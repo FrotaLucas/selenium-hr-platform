@@ -37,7 +37,7 @@ namespace TestBrowser.Steps
             email.SendKeys("lucas_frota@hotmail.com");
 
             //Birthday
-            var birthDate = felds[1].FindElement(By.XPath(".//input[contains(@formcontrolname, 'correo')]"));
+            var birthDate = felds[1].FindElement(By.XPath(".//input[contains(@formcontrolname, 'fechaNacimento')]"));
             birthDate.Click();
 
             birthDate.SendKeys("12/05/1993");
