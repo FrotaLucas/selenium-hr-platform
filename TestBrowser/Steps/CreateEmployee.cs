@@ -16,41 +16,28 @@ namespace TestBrowser.Steps
             var dialogContainer = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/mat-dialog-container"));
 
             //dialog-content
-            element = dialogContainer.FindElement(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content"));
+            //element = dialogContainer.FindElement(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content"));
+
+            //4 divs
+            var felds = dialogContainer.FindElements(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content/div"));
 
             //Name
-            element = element.FindElement(By.XPath(".//div/div/mat-form-field/div/div/div/input"));
+            //element = felds[0].FindElement(By.XPath(".//div/div/mat-form-field/div/div/div/input"));
+            element = felds[0].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
 
             element.Click();
+            element.SendKeys("Lucas");
 
-            Thread.Sleep(20 * Constants.StandartWaitTime);
+            //Email
+            //element = felds[0].FindElement(By.XPath(".//div/div/mat-form-field/div/div/div/input"));
+            element = felds[1].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
 
-
-
-            var SecbackButton = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-list/ion-header/ion-toolbar/ion-buttons"));
-            element = SecbackButton[0].FindElement(By.XPath(".//ion-back-button"));
             element.Click();
+            element.SendKeys("lucas_frota@hotmail.com");
+
+
             Thread.Sleep(20 * Constants.StandartWaitTime);
 
-            var thirdBackButton = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-filter/ion-header/ion-toolbar/ion-buttons"));
-            element = thirdBackButton[0].FindElement(By.XPath(".//ion-back-button"));
-            element.Click();
-            Thread.Sleep(20 * Constants.StandartWaitTime);
-
-
-            var menuButton = BrowserInstance.FindElement(By.XPath("//*//ion-router-outlet/app-home/ion-header/ion-toolbar/ion-buttons/ion-menu-toggle"));
-            Thread.Sleep(20 * Constants.StandartWaitTime);
-            menuButton.Click();
-
-            var logOut = BrowserInstance.FindElements(By.XPath("//*//app-root/ion-app/ion-menu/ion-content/ion-menu-toggle"));
-            Thread.Sleep(30 * Constants.StandartWaitTime);
-            logOut[5].Click();
-
-            var confirmBUtton = BrowserInstance.FindElements(By.XPath("//*//ion-app/ion-modal/app-is-user-alert-frage/ion-toolbar/div"));
-            Thread.Sleep(30 * Constants.StandartWaitTime);
-            element = confirmBUtton[1];
-            element.Click(); 
-            
             return true;
         }
     }
