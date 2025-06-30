@@ -21,26 +21,26 @@ namespace TestBrowser.Steps
             //Name
             var name = felds[0].FindElement(By.XPath(".//input[contains(@formcontrolname, 'nombre')]"));
             name.Click();
+
             name.SendKeys("Lucas");
 
             //surname 
             var surnameFeld = felds[0].FindElement(By.XPath(".//input[contains(@formcontrolname, 'apellido')]"));
             surnameFeld.Click();
+
             surnameFeld.SendKeys("Dias Frota");
 
             //Email
-            element = felds[1].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
+            var email = felds[1].FindElement(By.XPath(".//input[contains(@formcontrolname, 'correo')]"));
+            email.Click();
 
-            element.Click();
-            element.SendKeys("lucas_frota@hotmail.com");
+            email.SendKeys("lucas_frota@hotmail.com");
 
             //Birthday
-            element = felds[3].FindElement(By.XPath(".//div/mat-form-field/div/div/div/input"));
+            var birthDate = felds[1].FindElement(By.XPath(".//input[contains(@formcontrolname, 'correo')]"));
+            birthDate.Click();
 
-            element.Click();
-            element.SendKeys("lucas_frota@hotmail.com");
-
-            Thread.Sleep(20 * Constants.StandartWaitTime);
+            birthDate.SendKeys("12/05/1993");
 
             return true;
         }
