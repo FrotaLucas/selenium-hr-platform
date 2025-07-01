@@ -48,7 +48,7 @@ namespace TestBrowser
 
             var step = stepBases.Single(s => s.ComandName == functionName);
             //EXTRA DELAY
-            Thread.Sleep(30*Constants.StandartWaitTime);
+            Thread.Sleep(5*Constants.StandartWaitTime);
             bool stepResult = step.Step(BrowserInstance, stepValue, menuNamePath);
             return stepResult;
         }
