@@ -10,7 +10,6 @@ namespace TestBrowser
             {
                 new Login(),
                 new NewEnvironment(webUrl),
-                new NavMenuTree(),
                 new SelectEmployee(),
                 new AddNewData(),
                 new SetComment(),
