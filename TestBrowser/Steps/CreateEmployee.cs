@@ -20,7 +20,6 @@ namespace TestBrowser.Steps
             var felds = dialogContainer.FindElements(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content/div"));
 
             //Name
-
             var name = felds[0].FindElement(By.XPath($".//input[contains(@formcontrolname, {personalData[0]})]"));
             name.Click();
 
@@ -48,6 +47,7 @@ namespace TestBrowser.Steps
             //Document
             var document = felds[2].FindElement(By.XPath(".//input[contains(@formcontrolname, 'documento')]"));
             document.Click();
+
             document.SendKeys(personalData[4]); 
 
             //Birthday
