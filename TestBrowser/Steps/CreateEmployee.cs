@@ -39,20 +39,12 @@ namespace TestBrowser.Steps
             email.SendKeys(personalData[2]);
 
             //type of document
-
             var typeDocumentoFeld = felds[2].FindElement(By.XPath(".//div"));
             typeDocumentoFeld.Click();
 
-            //var matOption = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/div/mat-option"));
-            //var matOption2 = BrowserInstance.FindElement(By.XPath("//*//span[contains(text(), 'DNI')]"));
-
-            //op1
             var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), '{personalData[3]}')]"));
             matOption.Click();
 
-            //op2
-            //var matOption2 = BrowserInstance.FindElement(By.XPath("//*//span[contains(text(), 'DNI')]"));
-            //matOption2.Click();
 
             //Document
             var document = felds[2].FindElement(By.XPath(".//input[contains(@formcontrolname, 'documento')]"));
