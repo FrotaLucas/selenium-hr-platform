@@ -16,6 +16,7 @@ namespace TestBrowser.Steps
 
             var filter = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/div/mat-form-field"));
             filter.Click();
+            filter.SendKeys(stepValue);
 
             var garbageRow = BrowserInstance.FindElements(By.XPath("//*//app-root/app-list-personas/mat-card/table/tbody/tr/td")).Last();
             var deleteButton = garbageRow.FindElements(By.TagName("mat-icon")).Last();
