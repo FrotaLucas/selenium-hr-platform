@@ -13,7 +13,6 @@ namespace TestBrowser
                 new SelectEmployee(),
                 new AddNewData(),
                 new SetDate(),
-                new SaveChanges(),
                 new CreateEmployee(),
             };
         }
