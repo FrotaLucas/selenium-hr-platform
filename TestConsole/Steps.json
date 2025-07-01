@@ -18,8 +18,8 @@
             "step_path": null
         },
         "step4": {
-            "function_name": "selectFilter",
-            "step_value": "QS_Filter_Button_Formular",
+            "function_name": "selectEmployee",
+            "step_value": "Thomas",
             "step_path": null
         },
         "step5": {
