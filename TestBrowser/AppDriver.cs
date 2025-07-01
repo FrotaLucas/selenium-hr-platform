@@ -52,5 +52,10 @@ namespace TestBrowser
             bool stepResult = step.Step(BrowserInstance, stepValue, menuNamePath);
             return stepResult;
         }
+
+        public void Quit()
+        {
+            BrowserInstance.Quit();
+        }
     }
 }
