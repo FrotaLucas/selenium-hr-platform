@@ -12,6 +12,7 @@ namespace TestBrowser.Steps
         public override bool Step(IWebDriver BrowserInstance, string? stepValue, string? stepPath)
         {
             IWebElement element;
+            string[] personalData = stepValue.Split("|");
 
             var dialogContainer = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/mat-dialog-container"));
 
@@ -19,30 +20,35 @@ namespace TestBrowser.Steps
             var felds = dialogContainer.FindElements(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-content/div"));
 
             //Name
-            var name = felds[0].FindElement(By.XPath(".//input[contains(@formcontrolname, 'nombre')]"));
+
+            var name = felds[0].FindElement(By.XPath($".//input[contains(@formcontrolname, {personalData[0]})]"));
             name.Click();
 
-            name.SendKeys("Lucas");
+            name.SendKeys(personalData[0]);
 
             //surname 
             var surnameFeld = felds[0].FindElement(By.XPath(".//input[contains(@formcontrolname, 'apellido')]"));
             surnameFeld.Click();
 
-            surnameFeld.SendKeys("Dias Frota");
+            surnameFeld.SendKeys(personalData[1]);
 
             //Email
             var email = felds[1].FindElement(By.XPath(".//input[contains(@formcontrolname, 'correo')]"));
             email.Click();
 
-            email.SendKeys("lucas_frota@hotmail.com");
+            email.SendKeys(personalData[2]);
 
             //type of document
 
             var typeDocumentoFeld = felds[2].FindElement(By.XPath(".//div"));
             typeDocumentoFeld.Click();
 
-            var matOption = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/div/mat-option"));
+            //var matOption = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/div/mat-option"));
+            var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), {personalData[4]})]"));
+
             matOption.Click();
+
+
 
             //Birthday
             var birthDate = felds[3].FindElement(By.XPath(".//input[contains(@formcontrolname, 'fechaNacimento')]"));
