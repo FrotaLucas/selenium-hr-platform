@@ -4,7 +4,7 @@ namespace TestBrowser.Steps
 {
     internal class SelectEmployee : StepBase
     {
-        public SelectEmployee() : base("selectFilter")
+        public SelectEmployee() : base("selectEmployee")
         {
             
         }
@@ -13,24 +13,11 @@ namespace TestBrowser.Steps
         {
             IWebElement element;
 
-            var divs = BrowserInstance.FindElements(By.XPath("//*//ion-router-outlet/app-filter/ion-content/div"));
+            var employee = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/table/tbody/tr/td"));
+            var deleteButton = employee.FindElements(By.TagName("mat-icon")).Last();
+            deleteButton.Click();   
 
-            //Console.WriteLine(divs.Count());
-
-            foreach (var div in divs)
-            {
-                if (div.Text == stepValue)
-                {
-                    element = div.FindElements(By.XPath(".//ion-col")).Last();
-                    element = element.FindElement(By.XPath(".//ion-segment-button"));
-                    element.Click();
-                    
-                    return true;
-                }
-
-            }
-
-            return false;
+            return true;
 
         }
     }
