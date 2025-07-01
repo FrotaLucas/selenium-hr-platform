@@ -14,7 +14,7 @@
         },
         "step3": {
             "function_name": "createEmployee",
-            "step_value": null,
+            "step_value": "Thomas|Müller|thomas_mueller@hotmail.com|DNI|10024-60|12/03/1988",
             "step_path": null
         },
         "step4": {
