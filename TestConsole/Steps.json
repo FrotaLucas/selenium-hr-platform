@@ -23,12 +23,7 @@
             "step_path": null
         },
         "step5": {
-            "function_name": "addNewDataItem",
-            "step_value": null,
-            "step_path": null
-        },
-        "step6": {
-            "function_name": "logOut",
+            "function_name": "deleteEmployee",
             "step_value": null,
             "step_path": null
         }
