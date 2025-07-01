@@ -16,7 +16,12 @@ namespace TestBrowser.Steps
 
         public override bool Step(IWebDriver BrowserInstance, string? stepValue, string? stepPath)
         {
-            throw new NotImplementedException();
+            var garbageRow = BrowserInstance.FindElements(By.XPath("//*//app-root/app-list-personas/mat-card/table/tbody/tr/td")).Last();
+            var deleteButton = garbageRow.FindElements(By.TagName("mat-icon")).Last();
+            deleteButton.Click();
+            Thread.Sleep(Constants.StandartWaitTime);
+
+            return true;
         }
     }
 }
