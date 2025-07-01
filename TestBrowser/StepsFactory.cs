@@ -8,12 +8,11 @@ namespace TestBrowser
         {
             return new List<StepBase>
             {
-                new Login(),
                 new NewEnvironment(webUrl),
-                new SelectEmployee(),
                 new AddNewData(),
-                new SetDate(),
                 new CreateEmployee(),
+                new SelectEmployee(),
+                new DeleteEmployee(),
             };
         }
     }
