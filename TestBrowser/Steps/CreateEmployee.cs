@@ -44,10 +44,11 @@ namespace TestBrowser.Steps
             typeDocumentoFeld.Click();
 
             //var matOption = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/div/mat-option"));
-            var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), {personalData[4]})]"));
+            //var matOption2 = BrowserInstance.FindElement(By.XPath("//*//span[contains(text(), 'DNI')]"));
 
+
+            var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), {personalData[3]})]"));
             matOption.Click();
-
 
 
             //Birthday
