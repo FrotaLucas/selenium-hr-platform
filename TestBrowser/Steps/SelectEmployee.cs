@@ -13,8 +13,12 @@ namespace TestBrowser.Steps
         {
             IWebElement element;
 
-            var employee = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/table/tbody/tr/td"));
-            var deleteButton = employee.FindElements(By.TagName("mat-icon")).Last();
+
+            var filter = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/div/mat-form-field"));
+            filter.Click();
+
+            var garbageRow = BrowserInstance.FindElements(By.XPath("//*//app-root/app-list-personas/mat-card/table/tbody/tr/td")).Last();
+            var deleteButton = garbageRow.FindElements(By.TagName("mat-icon")).Last();
             deleteButton.Click();   
 
             return true;
