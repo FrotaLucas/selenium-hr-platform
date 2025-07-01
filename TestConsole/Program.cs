@@ -40,9 +40,10 @@ if( stepsData.Steps == null ||  stepsData.Steps.Count == 0 )
 bool result = webDriver.Run(stepsData);
 
 if(result)
-Console.WriteLine("Test successfully finished");
-
-
+{
+    Console.WriteLine("Test successfully finished");
+    webDriver.Quit();
+}
 
 
 
