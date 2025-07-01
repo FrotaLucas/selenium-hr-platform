@@ -2,9 +2,9 @@
 
 namespace TestBrowser.Steps
 {
-    internal class SelectFilter : StepBase
+    internal class SelectEmployee : StepBase
     {
-        public SelectFilter() : base("selectFilter")
+        public SelectEmployee() : base("selectFilter")
         {
             
         }

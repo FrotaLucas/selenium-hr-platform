@@ -11,7 +11,7 @@ namespace TestBrowser
                 new Login(),
                 new NewEnvironment(webUrl),
                 new NavMenuTree(),
-                new SelectFilter(),
+                new SelectEmployee(),
                 new AddNewData(),
                 new SetComment(),
                 new SetDate(),
