@@ -45,10 +45,10 @@ namespace TestBrowser.Steps
             var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), '{personalData[3]}')]"));
             matOption.Click();
 
-
             //Document
             var document = felds[2].FindElement(By.XPath(".//input[contains(@formcontrolname, 'documento')]"));
             document.Click();
+            document.SendKeys(personalData[4]); 
 
             //Birthday
             var birthDate = felds[3].FindElement(By.XPath(".//input[contains(@formcontrolname, 'fechaNacimento')]"));
