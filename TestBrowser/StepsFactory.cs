@@ -12,7 +12,6 @@ namespace TestBrowser
                 new NewEnvironment(webUrl),
                 new SelectEmployee(),
                 new AddNewData(),
-                new SetComment(),
                 new SetDate(),
                 new SaveChanges(),
                 new CreateEmployee(),
