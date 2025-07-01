@@ -14,7 +14,7 @@ namespace TestBrowser.Steps
             IWebElement element;
 
 
-            var filter = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/div/mat-form-field"));
+            var filter = BrowserInstance.FindElement(By.XPath("//*//app-root/app-list-personas/mat-card/div/mat-form-field/div/div/div/input"));
             filter.Click();
             filter.SendKeys(stepValue);
 
