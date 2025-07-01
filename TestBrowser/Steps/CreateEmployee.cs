@@ -56,6 +56,11 @@ namespace TestBrowser.Steps
 
             birthDate.SendKeys("12/05/1993");
 
+
+            //save
+            var saveButton = dialogContainer.FindElements(By.XPath(".//div/div/app-agregar-editar-persona/form/mat-dialog-actions/button"));
+            saveButton[1].Click();
+
             return true;
         }
     }
