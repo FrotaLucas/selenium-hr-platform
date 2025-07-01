@@ -19,10 +19,7 @@ namespace TestBrowser.Steps
             filter.SendKeys(stepValue);
             Thread.Sleep(20*Constants.StandartWaitTime);
 
-            var garbageRow = BrowserInstance.FindElements(By.XPath("//*//app-root/app-list-personas/mat-card/table/tbody/tr/td")).Last();
-            var deleteButton = garbageRow.FindElements(By.TagName("mat-icon")).Last();
-            deleteButton.Click();   
-            Thread.Sleep(Constants.StandartWaitTime);
+         
 
             return true;
 
