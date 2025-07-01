@@ -46,9 +46,13 @@ namespace TestBrowser.Steps
             //var matOption = BrowserInstance.FindElement(By.XPath("//*//body/div/div/div/div/mat-option"));
             //var matOption2 = BrowserInstance.FindElement(By.XPath("//*//span[contains(text(), 'DNI')]"));
 
-
-            var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), {personalData[3]})]"));
+            //op1
+            var matOption = BrowserInstance.FindElement(By.XPath($"//*//span[contains(text(), '{personalData[3]}')]"));
             matOption.Click();
+
+            //op2
+            //var matOption2 = BrowserInstance.FindElement(By.XPath("//*//span[contains(text(), 'DNI')]"));
+            //matOption2.Click();
 
             //Document
             var document = felds[2].FindElement(By.XPath(".//input[contains(@formcontrolname, 'documento')]"));
